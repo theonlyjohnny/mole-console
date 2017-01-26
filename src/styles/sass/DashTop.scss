@@ -1,0 +1,41 @@
+@import './mixins/full.scss';
+@import './Menu.scss';
+.DashController {
+  @include full();
+  flex-direction: row;
+  .settings {
+    height: 2vw;
+    width: 2vw;
+    right: 1vw;
+    top: 1vh;
+    position: absolute;
+    border-radius: 20%;
+  }
+  .dashContainer {
+    height: 100vh;
+    width: 100vw;
+    .miniDashCont {
+      left: 1vw;
+      position: absolute;
+      height: 5vw;
+      width: 8vw;
+      overflow: hidden;
+      top: 45vh;
+      opacity: 1;
+      transition: 0.5s all;
+      &.hidden {
+        opacity:0;
+      }
+    }
+    .dashBg {
+      @include full();
+      background-size: "cover";
+      .dash {
+        height: 98vh;
+        width: 98vw;
+        margin: 1vh 1vw 1vh 1vw;
+        flex-direction: row;
+      }
+    }
+  }
+}

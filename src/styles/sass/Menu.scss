@@ -1,0 +1,36 @@
+$menuSize:10vw;
+.menu {
+  width: $menuSize;
+  align-items: center;
+  display: flex;
+  height: 100vh;
+  z-index: 100;
+  position: fixed;
+  flex-direction: column;
+  justify-content: space-around;
+  overflow: hidden;
+  opacity: 1;
+  background: rgba(255, 255, 255, 0.3);
+  transition: all 0.6s;
+  &.smallMenu {
+    opacity: 0;
+  }
+  .miniDash,
+  .miniDashCont {
+    overflow: hidden;
+    display: flex;
+    margin: auto;
+    flex: 1 1 auto;
+    z-index: 101;
+    transition: all 0.6s;
+    width: $menuSize;
+    height: $menuSize;
+    position: relative;
+    flex-direction: row;
+    align-items: center;
+  }
+  .miniDash {
+    border: 1px solid black;
+    opacity: 0.9;
+  }
+}

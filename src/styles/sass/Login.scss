@@ -1,0 +1,52 @@
+@import './mixins/full.scss';
+.loginPage {
+  display: flex !important;
+  flex-direction: column;
+  background-size: cover;
+  align-items: center;
+  @include full();
+  .loginContainer {
+    margin: auto;
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 60vh;
+    .loginElem {
+      display: flex;
+      flex: 1 1 auto;
+    }
+    .mylo-logo {
+      flex-direction: column;
+      align-items: center;
+      .mylo-logo-img {
+        margin: auto;
+        display: flex;
+        position: relative;
+        width: 5vw;
+        height: 5vw;
+      }
+    }
+    .cheesy-text {
+      color: white;
+      text-shadow: 0.1px 0.1px black;
+      line-height: 1.5;
+      text-align: center;
+    }
+    .seperator {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+      .seperator-line {
+        width: 7vw;
+        margin: 1.5vw;
+        height: 1px;
+        background-color: white;
+      }
+      .seperator-text {
+        color: white;
+        font-size: 1vw;
+      }
+    }
+  }
+}
