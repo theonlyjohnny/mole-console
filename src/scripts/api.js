@@ -1,9 +1,10 @@
-const request = require("request-promise");
+const request = require("request-promise"),
+  config = require("./config.js");
 
 class API {
   constructor() {
-    this.adminKey = 'dxr8AYUy27P3WnTV';
-    this.apiUrl = 'http://localhost:8080'
+    this.adminKey = config.adminKey;
+    this.apiUrl = config.api;
   }
   _post(url, data) {
     const opts = {
